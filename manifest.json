@@ -3,8 +3,13 @@
   "description": "Not procrastination",
   "version": "1.0",
   "manifest_version": 3,
+  "permissions": ["activeTab", "scripting", "tabs", "storage", "webNavigation"],
   "action": {
     "default_popup": "index.html",
     "default_icon": "images/icon.png"
+  },
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
   }
 }
